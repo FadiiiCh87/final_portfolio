@@ -108,6 +108,9 @@ function openProject(key, trigger) {
   const project = projects[key];
   if (!project) return;
   dialogTrigger = trigger;
+  const projectLink = $('#dialog-project-link');
+  projectLink.href = key === 'hospital' ? 'https://hospital-management-system-fahad.onrender.com' : 'https://github.com/FadiiiCh87';
+  projectLink.textContent = key === 'hospital' ? 'View Live Project ↗' : 'GitHub profile ↗';
   $('#dialog-title').textContent = project.title;
   $('#dialog-category').textContent = project.category;
   $('#dialog-description').textContent = project.description;
